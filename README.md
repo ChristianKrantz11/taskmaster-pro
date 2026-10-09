@@ -1,6 +1,6 @@
 <h1 align="center">✅ Taskmaster Pro</h1>
 
-<p align="center">A lightweight task tracker that runs in the browser. Add tasks with due dates and they are saved automatically.</p>
+<p align="center">A kanban-style task board with due dates, drag-and-drop and automatic saving.</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&amp;logo=html5&amp;logoColor=white" alt="HTML5">
@@ -14,17 +14,23 @@
 
 ## Features
 
-- Add a task with a description and due date through a pop-up form
-- Tasks show in a **To Do** list with their due date as a badge
-- Tasks are saved in the browser's `localStorage`
-- **Remove All Tasks** button to clear the board
-- Data model already tracks **In Progress**, **In Review** and **Done** lists, ready for those columns to be added to the page
+- Four columns: **To Do**, **In Progress**, **In Review** and **Done**
+- Add tasks with a description and due date (date picker) from a pop-up form
+- Drag and drop tasks between columns, or reorder them within a column
+- Click a task's text or due date to edit it in place
+- Due-date warnings:
+  - Yellow for tasks due within 2 days
+  - Red for overdue tasks
+  - Tasks in Done are never flagged
+- Delete a single task, or clear the whole board
+- Everything is saved to `localStorage` automatically
+- Responsive layout: columns stack on smaller screens
 
 ## Built With
 
-- HTML, CSS, JavaScript
-- [jQuery](https://jquery.com/)
-- [Bootstrap 4](https://getbootstrap.com/docs/4.3/) (layout and modal)
+- HTML, CSS and JavaScript
+- [jQuery](https://jquery.com/) and [jQuery UI Sortable](https://jqueryui.com/sortable/) for drag-and-drop
+- [Bootstrap 4](https://getbootstrap.com/docs/4.3/) for layout and the modal
 
 ## Running Locally
 

@@ -1,3 +1,58 @@
-ul.list-group {
+.task-list {
   min-height: 130px;
+  padding: 4px;
+  border: 2px dashed #dee2e6;
+  border-radius: 0.25rem;
+}
+
+.task {
+  margin-bottom: 4px;
+  border-radius: 0.25rem !important;
+  border-width: 1px !important;
+  cursor: grab;
+}
+
+.task-text,
+.task-date {
+  cursor: pointer;
+}
+
+.task-text {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.task-date-input {
+  max-width: 170px;
+}
+
+.task.dragging {
+  cursor: grabbing;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.task-placeholder {
+  height: 72px;
+  margin-bottom: 4px;
+  border: 2px dashed #007bff;
+  border-radius: 0.25rem;
+  background: #e9f2ff;
+  list-style: none;
+}
+
+.legend {
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-right: 0.25em;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.legend-soon {
+  background-color: #ffeeba;
+}
+
+.legend-overdue {
+  background-color: #f5c6cb;
 }

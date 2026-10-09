@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="A kanban-style task tracker with due dates and drag-and-drop.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>Taskmaster Pro</title>
@@ -14,55 +14,77 @@
 
   <div class="row min-vh-100 no-gutters">
     <header class="col-12 col-lg-3 bg-dark text-light d-flex flex-column p-4 p-lg-3">
-      <h1 class="text-center">Taskmaster Pro Edition</h1>
-      <button id="create-task" class="btn btn-block btn-success" data-toggle="modal" data-target="#task-form-modal">Add
-        Task</button>
+      <h1 class="text-center">Taskmaster Pro</h1>
+      <button id="create-task" class="btn btn-block btn-success" data-toggle="modal" data-target="#task-form-modal">
+        Add Task
+      </button>
       <button id="remove-tasks" class="btn btn-block btn-danger">Delete All Tasks</button>
-      <p class="mt-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi voluptas architecto ipsa
-        excepturi aut non
-        laudantium sequi fugit officiis optio deleniti asperiores rem eius laborum maxime blanditiis culpa, quis iste?
-      </p>
+      <div class="mt-auto small text-white-50 pt-4">
+        <p class="mb-2"><strong class="text-light">Tips</strong></p>
+        <ul class="pl-3 mb-0">
+          <li>Drag tasks between columns to update their status.</li>
+          <li>Click a task's text or date to edit it.</li>
+          <li><span class="legend legend-soon"></span> Due within 2 days</li>
+          <li><span class="legend legend-overdue"></span> Overdue</li>
+        </ul>
+      </div>
     </header>
-    <main class="col-12 col-lg-9">
-      <div class="m-5">
-        <h2>To Do</h2>
-        <ul id="list-toDo" class="list-group"> </ul>
+
+    <main class="col-12 col-lg-9 p-4">
+      <div class="row">
+        <section class="col-12 col-md-6 col-xl-3 mb-4">
+          <h2 class="h4">To Do</h2>
+          <ul id="list-toDo" class="list-group task-list" data-list="toDo"></ul>
+        </section>
+        <section class="col-12 col-md-6 col-xl-3 mb-4">
+          <h2 class="h4">In Progress</h2>
+          <ul id="list-inProgress" class="list-group task-list" data-list="inProgress"></ul>
+        </section>
+        <section class="col-12 col-md-6 col-xl-3 mb-4">
+          <h2 class="h4">In Review</h2>
+          <ul id="list-inReview" class="list-group task-list" data-list="inReview"></ul>
+        </section>
+        <section class="col-12 col-md-6 col-xl-3 mb-4">
+          <h2 class="h4">Done</h2>
+          <ul id="list-done" class="list-group task-list" data-list="done"></ul>
+        </section>
       </div>
     </main>
   </div>
 
   <!-- Modal -->
-  <div class="modal fade" id="task-form-modal" tabindex="-1" role="dialog" aria-labelledby="task-form-modal"
+  <div class="modal fade" id="task-form-modal" tabindex="-1" role="dialog" aria-labelledby="task-form-title"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="task-form-modal">Add New Task</h5>
+          <h5 class="modal-title" id="task-form-title">Add New Task</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
-          <form>
+        <form id="task-form">
+          <div class="modal-body">
             <div class="form-group">
               <label for="modalTaskDescription">Task description</label>
-              <textarea id="modalTaskDescription" rows="3"></textarea>
+              <textarea id="modalTaskDescription" class="form-control" rows="3" required></textarea>
             </div>
-            <div class="form-group">
+            <div class="form-group mb-0">
               <label for="modalDueDate">Due date</label>
-              <input type="text" id="modalDueDate" placeholder="mm/dd/yyyy" autocomplete="off" />
+              <input type="date" id="modalDueDate" class="form-control" required />
             </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save Task</button>
-        </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save Task</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="./assets/js/script.js"></script>
