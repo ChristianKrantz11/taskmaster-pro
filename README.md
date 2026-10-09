@@ -1,6 +1,16 @@
-# Taskmaster Pro
+<h1 align="center">✅ Taskmaster Pro</h1>
 
-A lightweight task tracker that runs in the browser. Add tasks with a due date and they're saved automatically, so they're still there the next time you open the page.
+<p align="center">A lightweight task tracker that runs in the browser. Add tasks with due dates and they are saved automatically.</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&amp;logo=html5&amp;logoColor=white" alt="HTML5">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&amp;logo=css&amp;logoColor=white" alt="CSS3">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&amp;logo=javascript&amp;logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&amp;logo=jquery&amp;logoColor=white" alt="jQuery">
+  <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&amp;logo=bootstrap&amp;logoColor=white" alt="Bootstrap">
+</p>
+
+<p align="center"><img src="docs/screenshot.png" alt="Taskmaster Pro showing a To Do list of tasks with due-date badges" width="850"></p>
 
 ## Features
 
